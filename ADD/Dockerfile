@@ -1,2 +1,5 @@
 FROM almalinux:8
-ADD  https://github.com/daws-76s/notes/blob/master/session-50.txt  /tmp
+RUN yum install nginx -y
+ADD https://www.learningcontainer.com/wp-content/uploads/2020/05/sample.tar  /tmp
+EXPOSE 80/tcp
+CMD ["nginx","-g","daemon off;"]
