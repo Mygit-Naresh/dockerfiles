@@ -1,5 +1,6 @@
+ARG OSNAME
 ARG VERSION
-FROM almalinux:${VERSION}
+FROM ${OSNAME}:${VERSION}
 RUN yum install nginx -y
 ENV PLATFORM="Testing" \
     OWNER="Naresh" \
